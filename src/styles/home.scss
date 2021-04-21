@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.home {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  .particle {
+    background-image: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.836),
+        rgba(0, 0, 0, 0.993)
+      ),
+      url("../assets/man.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+  }
+  .home-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -45px;
+    h1 {
+      color: aqua;
+      font-size: calc(15px + 2vw);
+      font-family: "Rubik", sans-serif;
+      z-index: 11;
+      word-spacing: 11px;
+    }
+    .social-icons {
+      i {
+        color: white;
+        padding: 0 10px;
+        cursor: pointer;
+        transition: 0.4s;
+        &:hover {
+          color: aqua;
+        }
+      }
+    }
+  }
+}
+.indicator {
+  width: 20px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
+}
+.indicator::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  margin-left: -3px;
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 50%;
+  animation: scroll 1.4s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-content {
+    padding-left: 45px;
+  }
+}
