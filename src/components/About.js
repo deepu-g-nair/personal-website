@@ -22,7 +22,16 @@ const About = () => {
             actively looking for more. I have done couple of works and have
             participated in a hackathon named 'Reboot Kerala Hackathon 2020'.
             <br />
-            <button>Get my resume</button>
+            <button>
+              <a
+                href="https://drive.google.com/file/d/1AYEaMQt9Lr11I-J6MUOQMmolEHcsyFq9/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Get my resume
+              </a>
+            </button>
           </p>
         </div>
       </div>

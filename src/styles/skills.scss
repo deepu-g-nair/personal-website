@@ -1,0 +1,104 @@
+.skills {
+  width: 100%;
+  min-height: 75vh;
+  padding: 30px;
+  overflow: hidden;
+  //background: rgba(0, 0, 0, 0.8);
+  .skills-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-family: cursive;
+      font-size: calc(25px + 1vw);
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #0d0d74;
+    }
+  }
+  .skills-body {
+    display: grid;
+    //width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    // margin-top: 25px;
+    .skills-body-left {
+      padding: 5px 50px;
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      min-height: 50px;
+      p {
+        font-size: 14px;
+        padding-top: 10px;
+        line-height: 28px;
+        font-family: "Poppins", sans-serif;
+        text-align: justify;
+        width: 90%;
+        transition: 0.5s;
+      }
+    }
+    .skills-body-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 95%;
+      padding: 0px 40px;
+      margin-top: -40px;
+      .skills-percent {
+        width: 100%;
+        //margin-left: 90px;
+        margin-top: 25px;
+        .percent-name {
+          // width: 100%;
+          display: flex;
+          justify-content: space-between;
+          p {
+            font-family: "Poppins", sans-serif;
+            color: black;
+          }
+        }
+        .percent-level {
+          //width: 100%;
+          height: 10px;
+          background-color: rgb(185, 179, 179);
+          border-radius: 10px;
+          margin-top: 5px;
+          .level-value {
+            border-radius: 10px;
+            height: 100%;
+            background-color: rgb(13, 13, 182);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:480px) {
+  .skills-body {
+    .skills-body-left {
+      margin-top: -40px;
+      width: 100vw;
+      height: 100%;
+      p {
+        width: 100vw;
+        margin-left: -65px;
+      }
+    }
+    .skills-body-right {
+      display: flex;
+      //margin-left: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      //margin-top: 40px;
+      .skills-percent {
+        width: 100%;
+        //background-color: red;
+      }
+    }
+  }
+}
