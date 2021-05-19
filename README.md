@@ -1,3 +1,7 @@
+## Website is live now
+
+[Click here to view the website](https://deepugnair.surge.sh)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

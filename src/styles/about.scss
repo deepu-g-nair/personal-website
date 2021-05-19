@@ -53,10 +53,11 @@
         transition: 0.2s;
         margin-top: 5px;
         background-color: #0d0d74;
-        color: white;
+        color: rgb(255, 255, 255);
         &:hover {
-          background-color: aqua;
-          color: rgb(36, 34, 34);
+          border: 2px solid #0d0d74;
+          background-color: rgb(134, 94, 94);
+          color: black;
         }
       }
     }
@@ -84,7 +85,7 @@
     justify-content: center;
     align-items: center;
     .about-body-left {
-      margin-top: -20px;
+      margin-top: 10px;
       img {
         margin-left: 0;
         width: 100%;

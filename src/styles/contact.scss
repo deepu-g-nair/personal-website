@@ -1,0 +1,129 @@
+.contact {
+  height: 50vh;
+  margin-top: 40px;
+  .contact-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin-top: 20px;
+      font-family: cursive;
+      font-size: calc(25px + 1vw);
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: rgb(255, 255, 255);
+    }
+  }
+  .contact-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    // background-color: red;
+    .body-main {
+      input {
+        width: 235px;
+        height: 25px;
+        border: none;
+        outline: none;
+        background-color: rgba(0, 0, 0, 0);
+        border-bottom: 2px solid aqua;
+        color: white;
+        transition: 0.3s ease-in;
+        &:focus {
+          border-bottom: 2px solid rgb(55, 0, 255);
+        }
+      }
+    }
+    .body-area {
+      margin-top: 50px;
+      overflow: hidden;
+      input {
+        width: 520px;
+        border: none;
+        outline: none;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0);
+        border-bottom: 2px solid aqua;
+        color: white;
+        transition: 0.3s ease-in;
+        &:focus {
+          border-bottom: 2px solid rgb(55, 0, 255);
+        }
+      }
+    }
+    button {
+      margin-top: 45px;
+      border: none;
+      outline: none;
+      padding: 5px;
+      width: 70px;
+      border-radius: 5px;
+      background-color: aqua;
+      color: black;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+@media screen and(max-width:480px) {
+  .contact {
+    height: 50vh;
+  }
+  .body-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    //background-color: blue;
+    input {
+      width: 0px;
+      margin-top: 10px;
+      color: greenyellow;
+      text-align: center;
+    }
+  }
+  .body-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 66vw;
+    //background-color: greenyellow;
+    input {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .contact-body {
+    button {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and(max-width:550px) {
+  .body-area,
+  .body-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .body-area {
+    width: 50vw;
+    input {
+      text-align: center;
+    }
+  }
+  .contact {
+    height: 55vh;
+  }
+}

@@ -14,75 +14,80 @@
     }
   }
   .works-body {
-    display: flex;
-    justify-content: space-around;
     padding: 40px;
-    .works-card {
-      padding: 30px;
-      width: 100%;
-      overflow: hidden;
-      .card-image {
+    .works-body-row {
+      display: flex;
+      justify-content: space-between;
+      .works-card {
+        padding: 30px;
+        width: 100%;
         overflow: hidden;
-        position: relative;
-        .card-hover {
+        .card-image {
+          overflow: hidden;
+          position: relative;
+          .card-hover {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+            transition: 0.2s;
+            button {
+              transition: 0.2s ease-in;
+              border: none;
+              outline: none;
+              padding: 8px;
+              border-radius: 5px;
+              background: #0d0d74;
+              color: white;
+              font-size: 10px;
+              cursor: pointer;
+              &:hover {
+                border: 2px solid #0d0d74;
+                background-color: whitesmoke;
+                color: black;
+              }
+            }
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .card-content {
+          p {
+            font-family: "Poppins", sans-serif;
+            color: rgb(83, 82, 82);
+            font-size: 14px;
+            text-align: center;
+            margin-top: 8px;
+          }
+        }
+        &:hover .card-image img {
+          opacity: 0.3;
+        }
+        &:hover .card-hover {
           position: absolute;
-          top: 100%;
+          top: 50%;
           left: 0;
           right: 0;
           bottom: 0;
-          text-align: center;
-          width: 100%;
-          transition: 0.2s;
-          button {
-            transition: 0.2s ease-in;
-            border: none;
-            outline: none;
-            padding: 8px;
-            border-radius: 5px;
-            background: #0d0d74;
-            color: white;
-            font-size: 10px;
-            cursor: pointer;
-            &:hover {
-              border: 2px solid #0d0d74;
-              background-color: whitesmoke;
-              color: black;
-            }
-          }
         }
-        img {
-          width: 100%;
-        }
-      }
-      .card-content {
-        p {
-          font-family: "Poppins", sans-serif;
-          color: rgb(83, 82, 82);
-          font-size: 14px;
-          text-align: center;
-          margin-top: 8px;
-        }
-      }
-      &:hover .card-image img {
-        opacity: 0.3;
-      }
-      &:hover .card-hover {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        bottom: 0;
       }
     }
   }
 }
 
 @media screen and (max-width: "480px") {
-  .works-body {
+  .works-body-row {
     display: flex;
     flex-direction: column;
   }
-  .works-card:hover .card-hover {
-    //transform: translateY(0px);
+}
+@media screen and (max-width: "650px") {
+  .works-body-row {
+    display: flex;
+    flex-direction: column;
   }
 }
